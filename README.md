@@ -14,7 +14,7 @@ This project demonstrates how to integrate Keycloak with a Spring Boot applicati
 2. Navigate to the project directory
 3. Build the Spring Boot application:
    ```bash
-   cd spring-app
+   cd spring-boot-demo-api
    mvn clean package
    cd ..
 
