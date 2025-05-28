@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: default
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/test-realm
+          jwk-set-uri: http://localhost:8080/auth/realms/test-realm/protocol/openid-connect/certs
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/auth/realms/test-realm
+          jwk-set-uri: http://keycloak:8080/auth/realms/test-realm/protocol/openid-connect/certs
+server:
+  port: 8081
